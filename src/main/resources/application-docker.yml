@@ -1,6 +1,6 @@
 spring:
   application:
-    name: notificacaoConsumer
+    name: notificacao-insumos-consumer
   kafka:
     bootstrap-servers: kafka:9092
     consumer:
@@ -12,7 +12,7 @@ spring:
       auto-create: true
 
 server:
-  port: 8082
+  port: 0
 
 app:
   email:
@@ -24,6 +24,6 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-      defaultZone: http://controle-servicos:8761/eureka
+      defaultZone: http://eureka-service:8761/eureka
   instance:
-    hostname: notificacaoConsumer
+    hostname: notificacao-insumos-consumer
